@@ -1,0 +1,61 @@
+<section role="main" class="content-body card-margin" style="width: 2400px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <section class="card">
+          <header class="card-header">
+            <div class="card-actions">
+              <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+              <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            </div>
+            <h2 class="card-title">Liste cours</h2>
+          </header>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <button class="btn" style="background-color: #c44976;">
+                <a [routerLink]="['/admin/ajoutercour']" class="text-white" style="font-weight: normal;">Ajouter Cour</a>
+              </button>
+            </div>
+            <table class="table table-responsive-md mb-0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Titre</th>
+                  <th>Prix</th>
+                  <th>Image</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="active" *ngFor="let del of cours">
+                  <td>{{del.id}}</td>
+                  <td>{{del.title}}</td>
+                  <td>{{del.price}} DT</td>
+                  <td>
+                    <img [src]="'assets/images/'+getNomFichierImage(del.image)" class="rounded-circle" width="44" height="44" alt="{{ del.title }}">
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-sm" (click)="supprimercour(del.id)">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>
+                    <button class="btn btn-info btn-sm" [routerLink]="['/admin/modifiercour', del.id]" >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                  
+                 
+
+                </tr>
+    
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    
+    </div>
+    
+    </section>
+    

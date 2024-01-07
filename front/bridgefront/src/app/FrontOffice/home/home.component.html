@@ -1,0 +1,60 @@
+<div class="page-wrapper">
+    <app-headerfront></app-headerfront>
+    <div class="page-content">
+        <main class="page-main">         
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('assets/images/1.jpg');">
+                        <div class="overlay">
+                            <div class="text-container">
+                                <h2>Improve your skills on your own</h2>
+                                <h2>To prepare for a better future</h2>
+                                <a href="#" class="register-button">Register Now</a>                            
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+         
+            </div>    
+            <br>
+            <br>
+            
+            <div class="courses-section">
+                <h2>Discover Our Courses :</h2>
+                <a href="#" class="View-button">View More</a>
+            </div>
+            <br>
+            <br>
+            <div>
+                <app-liste-cour></app-liste-cour>
+                 </div>
+
+            <br>
+            <br>
+
+
+<div class="contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form"  #contactForm="ngForm">
+        <label for="name" class="contact-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Jiara Martins" required>
+        
+        <label for="email" class="contact-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="hello@reallygreatsite.com" required>
+        
+        <label for="message" class="contact-label">Message</label>
+        <textarea id="message" name="message"  style="border-radius: 20px;"  placeholder="Write your message here" required></textarea>
+        
+        <button type="submit">Send the message</button>
+    </form>
+</div>
+
+            <br>
+            <br>
+            <br>
+<app-footerfront></app-footerfront> 
+
+        </main>
+    </div>
+   
+</div>

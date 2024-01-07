@@ -1,0 +1,11 @@
+.page-header {
+    background-color: white; /* Set the background color to white */
+    padding: 10px; /* Optional: Add padding for better appearance */
+}
+
+.logo {
+    height: 5em;
+    margin-top: 0;
+    margin-left: 0.4em;
+    margin-right: 0.1em;
+}

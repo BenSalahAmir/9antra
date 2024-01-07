@@ -1,0 +1,51 @@
+<section role="main" class="content-body card-margin" style="width: 2400px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <section class="card">
+          <header class="card-header">
+            <div class="card-actions">
+              <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+              <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            </div>
+            <h2 class="card-title">Ajouter Cour</h2>
+          </header>
+          <div class="card-body">
+
+
+            <h5 class="mb-0">Ajouter un nouveau cours</h5>
+              <br>
+            <form (ngSubmit)="onSoumettre(courForm)" #courForm="ngForm" enctype="multipart/form-data">
+                <div class="mb-3">
+                <label for="title" class="form-label">Titre</label>
+                <input type="text" class="form-control" id="title" name="title" [(ngModel)]="cour.title" #title="ngModel" required>
+                <div *ngIf="title.invalid && title.touched" class="text-danger">
+                  Le titre est Obligatoire.                </div>
+                </div>
+                <div class="mb-3">
+                <label for="price" class="form-label">Prix</label>
+                <input type="number" class="form-control" id="price" name="price" [(ngModel)]="cour.price" #price="ngModel" required>
+                <div *ngIf="price.invalid && price.touched" class="text-danger">
+                  Le prix est Obligatoire.
+                                </div>
+                </div>
+                <div class="form-group">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" id="image" name="image" class="form-control" (change)="surChangementFichier($event)" required>
+                <div *ngIf="!fichierSelectionne && courForm.submitted" class="text-danger">
+                  L'image est Obligatoire.
+                                </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary" [disabled]="courForm.invalid">Ajouter</button>
+            </form>
+            
+         
+          </div>
+        </section>
+      </div>
+    
+    </div>
+    
+    </section>
+    

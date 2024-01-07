@@ -1,0 +1,60 @@
+<section role="main" class="content-body card-margin" style="width: 2400px;">
+    <div class="row">
+      <div class="col-lg-6">
+        <section class="card">
+          <header class="card-header">
+            <div class="card-actions">
+              <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+              <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            </div>
+            <h2 class="card-title">Modifier Cour</h2>
+          </header>
+          <div class="card-body">
+
+
+            <h5 class="mb-0">Modifier Cour</h5>
+              <br>
+              <!-- add-course.component.html -->
+              <form (ngSubmit)="onSubmit(courseForm)" #courseForm="ngForm" novalidate>
+              
+                <!-- Title Input -->
+                <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title" [(ngModel)]="cour.title" required #title="ngModel">
+                  <div *ngIf="title.invalid && title.touched" class="text-danger">
+                    Title is required.
+                  </div>
+                </div>
+    
+                <!-- Price Input -->
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="number" class="form-control" id="price" name="price" [(ngModel)]="cour.price" required #price="ngModel">
+                  <div *ngIf="price.invalid && price.touched" class="text-danger">
+                    Price is required and must be a number.
+                  </div>
+                </div>
+    
+                <!-- Image Input -->
+                <div class="mb-3">
+                  <div class="form-group">
+                      <label for="image" class="form-label">Image</label>
+                      <input type="file" id="image" name="image" class="form-control" (change)="onFileChange($event)">
+                      <!-- Pas besoin de ngModel ici, car les fichiers sont traités séparément -->
+                    </div>
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" [disabled]="courseForm.invalid">Update</button>
+              </form>
+            
+         
+          </div>
+        </section>
+      </div>
+    
+    </div>
+    
+    </section>
+    

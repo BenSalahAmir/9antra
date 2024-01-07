@@ -1,0 +1,234 @@
+/* Contact Section Styles */
+.contact-section {
+    background: #eeaa4b; /* Adjusted to a soft pink color */
+    border-radius: 30px; /* Increased rounded corners */
+    padding: 20px 40px; /* Adjusted padding for a tighter fit */
+    max-width: 500px; /* Reduced maximum width */
+    margin: 20px auto; /* Centering the contact section with less margin */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtler shadow */
+    text-align: center;
+    
+}
+
+.contact-section h2 {
+    color: #333; /* Maintaining a dark text color for the title */
+    margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section .contact-label {
+    align-self: flex-start;
+    margin-left: 10%; /* Adjust based on the width of the form */
+    margin-bottom: 5px;
+    color: #333; /* Dark label color */
+    font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 80%; /* Full width of the container */
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced spacing between fields */
+    border: 2px solid #FCCAC7; /* Thicker border color matching the background */
+    border-radius: 25px; /* Increased rounded borders */
+    font-size: 14px; /* Adjusted font size */
+}
+
+.contact-section button {
+    background-color: #c44976; /* A solid pink color for the button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Increased rounded button edges */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above the button */
+}
+
+.contact-section button:hover {
+    background-color: #b73e65; /* Darker shade for hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section input,
+    .contact-section textarea {
+        width: 90%; /* Full width on smaller screens */
+    }
+    
+    .contact-section .contact-label {
+        margin-left: 5%; /* Adjust based on the width of the form */
+
+        
+    }
+}
+
+
+
+
+.swiper {
+    height: calc(100vh - 300px); /* Ajustez les 100px à la hauteur combinée de votre en-tête/pied de page */
+    width: 1400px;
+    overflow: hidden; /* Facultativement, masquez le dépassement si encore nécessaire */
+}
+
+
+/* Semi-transparent overlay styles */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:     rgba(255, 255, 255, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text and button styles within the overlay */
+.overlay-text {
+    text-align: center;
+    color: white;
+}
+
+.overlay-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.overlay-text p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.register-button {
+    padding: 10px 20px;
+    background-color: #c44976; /* Updated color */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Fully rounded corners */
+    font-size: 1em;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: normal; /* Non-bold font weight */
+
+}
+
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Remove rounded corners from the text container */
+.text-container {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Clear white background */
+    border-radius: 0; /* No rounded corners */
+    display: inline-block;
+}
+
+.text-container h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.text-container p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.register-button {
+    padding: 12px 50px;
+    background-color: #c44976;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1em;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+.courses-section {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.courses-section h2 {
+    margin-right: 700px; /* Pushes the h2 to the left and button to the right */
+}
+
+/* Styling for the button */
+.View-button {
+    margin-left: 20px; /* Add space between the h2 and the button */
+
+    padding: 10px 30px;
+    background-color: #c44976; /* Semi-transparent pink color for the button */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.8s;
+    font-weight: normal; /* Non-bold font weight */
+
+}
+
+
+
+
+
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed during scroll */
+}
+
+
+.swiper-container {
+    width: 100vw;
+    height: calc(100vh - 300px);
+    /* Ajouter les autres styles de swiper-container ici... */
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Ajouter les autres styles de swiper-slide ici... */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* Ajouter les autres styles globaux ici... */
+}
